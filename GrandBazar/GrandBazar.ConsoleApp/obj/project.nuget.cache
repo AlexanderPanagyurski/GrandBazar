@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "779JVidfHL+89BDuVzgDfBh1/I3wukCJHZlJHFHnBvavsNAbk9UtI2HCCKPtyxO24R7+B4jShhrS4DGrd0qcFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\home\\Desktop\\GrandBazar\\GrandBazar\\GrandBazar.ConsoleApp\\GrandBazar.ConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\home\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,71 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "GrandBazar.ConsoleApp/1.0.0": {
+        "dependencies": {
+          "GrandBazar.Data": "1.0.0"
+        },
+        "runtime": {
+          "GrandBazar.ConsoleApp.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.7.0": {},
+      "GrandBazar.Common/1.0.0": {
+        "runtime": {
+          "GrandBazar.Common.dll": {}
+        }
+      },
+      "GrandBazar.Data/1.0.0": {
+        "dependencies": {
+          "GrandBazar.Models": "1.0.0"
+        },
+        "runtime": {
+          "GrandBazar.Data.dll": {}
+        }
+      },
+      "GrandBazar.Models/1.0.0": {
+        "dependencies": {
+          "GrandBazar.Common": "1.0.0",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "runtime": {
+          "GrandBazar.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GrandBazar.ConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.ComponentModel.Annotations/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+      "path": "system.componentmodel.annotations/4.7.0",
+      "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
+    },
+    "GrandBazar.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrandBazar.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GrandBazar.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

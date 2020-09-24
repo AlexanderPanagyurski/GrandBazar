@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "De1YH9uT3dRXVKjiZgbgpcrO2Eprv+d0fFU48uDDUxdiOtOTS0/9uhp9M75a9vidTnuDMh2l25UqEI8/xlx0HQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\home\\Desktop\\GrandBazar\\GrandBazar\\GrandBazar.Models\\GrandBazar.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\home\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\home\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
