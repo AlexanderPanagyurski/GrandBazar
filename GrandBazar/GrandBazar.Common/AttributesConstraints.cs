@@ -63,10 +63,18 @@ namespace GrandBazar.Common
         public const short OrderAdditionalInformationMaxLength = 500;
         #endregion
 
-
         #region User
 
         public const byte UserNameMaxLength = 50;
+        #endregion
+
+        #region Country
+        public const byte CountryNameMaxLength = 50;
+        #endregion
+
+
+        #region City
+        public const byte CityNameMaxLength = 50;
         #endregion
     }
 }
