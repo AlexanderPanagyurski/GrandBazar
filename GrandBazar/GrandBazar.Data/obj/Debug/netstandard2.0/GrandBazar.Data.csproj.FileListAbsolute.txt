@@ -8,7 +8,7 @@ C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\bin\Debug\netstandar
 C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\obj\Debug\netstandard2.0\GrandBazar.Data.csprojAssemblyReference.cache
 C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\obj\Debug\netstandard2.0\GrandBazar.Data.AssemblyInfoInputs.cache
 C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\obj\Debug\netstandard2.0\GrandBazar.Data.AssemblyInfo.cs
-C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\obj\Debug\netstandard2.0\GrandBazar.Data.csproj.CoreCompileInputs.cache
 C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\obj\Debug\netstandard2.0\GrandBazar.Data.csproj.CopyComplete
 C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\obj\Debug\netstandard2.0\GrandBazar.Data.dll
 C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\obj\Debug\netstandard2.0\GrandBazar.Data.pdb
+C:\Users\home\Desktop\GrandBazar\GrandBazar\GrandBazar.Data\obj\Debug\netstandard2.0\GrandBazar.Data.csproj.CoreCompileInputs.cache
