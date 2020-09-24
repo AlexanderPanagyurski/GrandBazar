@@ -6,12 +6,12 @@ using System.Text;
 
 namespace GrandBazar.Data
 {
-    public class GrandBazarDbContent : DbContext
+    public class GrandBazarDbContext : DbContext
     {
-        public GrandBazarDbContent()
+        public GrandBazarDbContext()
         {
         }
-        public GrandBazarDbContent( DbContextOptions options)
+        public GrandBazarDbContext( DbContextOptions options)
             : base(options)
         {
         }
@@ -27,5 +27,8 @@ namespace GrandBazar.Data
 
         //TODO: DbSets
         //TODO: OnModelCreating Method
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
     }
 }
