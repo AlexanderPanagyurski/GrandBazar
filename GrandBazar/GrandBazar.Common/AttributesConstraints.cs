@@ -72,7 +72,6 @@ namespace GrandBazar.Common
         public const byte CountryNameMaxLength = 50;
         #endregion
 
-
         #region City
         public const byte CityNameMaxLength = 50;
         #endregion

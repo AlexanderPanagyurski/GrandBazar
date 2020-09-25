@@ -31,6 +31,10 @@ namespace GrandBazar.Models
         public string ProductCategoryId { get; set; }
         public virtual ProductCategory ProductCategory { get; set; }
 
+        [ForeignKey(nameof(ShoppingCart))]
+        public string ShoppingCartId { get; set; }
+        public virtual ShoppingCart ShoppingCart { get; set; }
+
         public int AvailableQuantity { get; set; }
 
         public virtual ICollection<OrderProduct> OrderProducts { get; set; } = new HashSet<OrderProduct>();
