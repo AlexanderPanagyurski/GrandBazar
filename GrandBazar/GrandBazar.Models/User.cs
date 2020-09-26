@@ -57,6 +57,10 @@ namespace GrandBazar.Models
         public string CountryId { get; set; }
         public virtual Country Country { get; set; }
 
+        [ForeignKey(nameof(State))]
+        public string StateId { get; set; }
+        public virtual State State { get; set; }
+
         [ForeignKey(nameof(City))]
         public string CityId { get; set; }
         public virtual City City { get; set; }

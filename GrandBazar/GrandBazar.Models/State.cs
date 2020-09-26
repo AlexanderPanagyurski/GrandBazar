@@ -7,22 +7,20 @@ using System.Text;
 
 namespace GrandBazar.Models
 {
-    public class City
+    public class State
     {
-        [Required]
-        public string CityId { get; set; } = Guid.NewGuid().ToString();
+        [Key]
+        public string Id { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
-        [MaxLength(AttributesConstraints.CityNameMaxLength)]
+        [MaxLength(AttributesConstraints.StateNameMaxLength)]
         public string Name { get; set; }
 
         [ForeignKey(nameof(Country))]
         public string CountryId { get; set; }
         public virtual Country Country { get; set; }
 
-        [ForeignKey(nameof(State))]
-        public string StateId { get; set; }
-        public virtual State State { get; set; }
+        public virtual ICollection<State> States { get; set; } = new HashSet<State>();
 
         public virtual ICollection<User> Users { get; set; } = new HashSet<User>();
     }

@@ -19,5 +19,7 @@ namespace GrandBazar.Models
         public virtual ICollection<City> Cities { get; set; } = new HashSet<City>();
         
         public virtual ICollection<User> Users { get; set; } = new HashSet<User>();
+
+        public virtual ICollection<Country> Countries { get; set; } = new HashSet<Country>();
     }
 }

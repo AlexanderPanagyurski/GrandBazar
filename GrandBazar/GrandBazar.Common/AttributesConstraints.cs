@@ -68,12 +68,11 @@ namespace GrandBazar.Common
         public const byte UserNameMaxLength = 50;
         #endregion
 
-        #region Country
+        #region Country, State, City
         public const byte CountryNameMaxLength = 50;
-        #endregion
-
-        #region City
+        public const byte StateNameMaxLength = 50;
         public const byte CityNameMaxLength = 50;
         #endregion
+
     }
 }
