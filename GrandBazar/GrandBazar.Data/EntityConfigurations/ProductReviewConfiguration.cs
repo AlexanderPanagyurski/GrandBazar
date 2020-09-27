@@ -20,6 +20,14 @@ namespace GrandBazar.Data.EntityConfigurations
                     .IsUnicode(true);
 
             productReview
+                    .Property(p => p.PhoneNumber)
+                    .IsUnicode(false);
+
+            productReview
+                    .Property(p => p.Email)
+                    .IsUnicode(false);
+
+            productReview
                     .HasOne(pr => pr.Product)
                     .WithMany(p => p.ProductReviews)
                     .OnDelete(DeleteBehavior.Restrict);

@@ -16,6 +16,7 @@ namespace GrandBazar.Models
         [MaxLength(AttributesConstraints.ContentMaxLength)]
         public string Content { get; set; }
 
+        [Required]
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
         public virtual User User { get; set; }

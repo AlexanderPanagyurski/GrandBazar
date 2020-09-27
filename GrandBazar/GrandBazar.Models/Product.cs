@@ -27,10 +27,12 @@ namespace GrandBazar.Models
 
         public DateTime? UpdatedOn { get; set; }
 
+        [Required]
         [ForeignKey(nameof(ProductCategory))]
         public string ProductCategoryId { get; set; }
         public virtual ProductCategory ProductCategory { get; set; }
 
+        [Required]
         [ForeignKey(nameof(ShoppingCart))]
         public string ShoppingCartId { get; set; }
         public virtual ShoppingCart ShoppingCart { get; set; }

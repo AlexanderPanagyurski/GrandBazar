@@ -20,6 +20,35 @@ namespace GrandBazar.Data.EntityConfigurations
             user
                 .Property(u => u.AboutMe)
                 .IsUnicode(true);
+
+            user
+                .Property(u => u.Email)
+                .IsUnicode(false);
+
+            user
+                .Property(u => u.PhoneNumber)
+                .IsUnicode(false);
+
+            user
+                .Property(u => u.ImageUrl)
+                .IsUnicode(false);
+
+            user
+                .Property(u => u.CoverImageUrl)
+                .IsUnicode(false);
+
+            user
+                .Property(u => u.InstagramUrl)
+                .IsUnicode(false);
+
+            user
+                .Property(u => u.TwitterUrl)
+                .IsUnicode(false);
+
+            user
+                .Property(u => u.FacebookUrl)
+                .IsUnicode(false);
+
             user
                 .HasOne(u => u.Country)
                 .WithMany(c => c.Users)

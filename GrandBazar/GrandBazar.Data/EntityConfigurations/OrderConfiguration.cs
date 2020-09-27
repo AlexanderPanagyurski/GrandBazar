@@ -16,6 +16,18 @@ namespace GrandBazar.Data.EntityConfigurations
                 .IsUnicode(true);
 
             order
+                .Property(o => o.Email)
+                .IsUnicode(false);
+
+            order
+                .Property(o => o.ZipCode)
+                .IsUnicode(false);
+
+            order
+                .Property(o => o.PhoneNumber)
+                .IsUnicode(false);
+
+            order
                 .Property(o => o.Address)
                 .IsUnicode(true);
 

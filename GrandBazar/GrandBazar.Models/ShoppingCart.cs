@@ -13,8 +13,9 @@ namespace GrandBazar.Models
         public string Id { get; set; } = new Guid().ToString();
 
         [Range(typeof(decimal),AttributesConstraints.PriceMinValue,AttributesConstraints.PriceMaxValue)]
-        public decimal TotalPrice { get => this.Products.Sum(p => p.Price); }
+        public decimal TotalPrice { get; set; }
 
+        [Required]
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
         public virtual User User { get; set; }

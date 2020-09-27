@@ -31,10 +31,12 @@ namespace GrandBazar.Models
         [MaxLength(AttributesConstraints.ProductReviewEmailMaxLength)]
         public string Email { get; set; }
 
+        [Required]
         [ForeignKey(nameof(Product))]
         public string ProductId { get; set; }
         public virtual Product Product { get; set; }
 
+        [Required]
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
         public virtual User User { get; set; }

@@ -16,13 +16,10 @@ namespace GrandBazar.Models
         [MaxLength(AttributesConstraints.CityNameMaxLength)]
         public string Name { get; set; }
 
+        [Required]
         [ForeignKey(nameof(Country))]
         public string CountryId { get; set; }
         public virtual Country Country { get; set; }
-
-        [ForeignKey(nameof(State))]
-        public string StateId { get; set; }
-        public virtual State State { get; set; }
 
         public virtual ICollection<User> Users { get; set; } = new HashSet<User>();
     }

@@ -47,7 +47,7 @@ namespace GrandBazar.Models
         [MaxLength(AttributesConstraints.OrderAdditionalInformationMaxLength)]
         public string AdditionalInformation { get; set; }
 
-        public DateTime? CaleledOn { get; set; }
+        public DateTime? CanceledOn { get; set; }
 
         public DateTime CreatedOn { get; set; }
 

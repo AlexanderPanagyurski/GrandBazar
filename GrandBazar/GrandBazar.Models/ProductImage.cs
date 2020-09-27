@@ -17,7 +17,8 @@ namespace GrandBazar.Models
 
         [Required]
         public string ImageUrl { get; set; }
-
+        
+        [Required]
         [ForeignKey(nameof(Product))]
         public string ProductId { get; set; }
         public virtual Product Product { get; set; }

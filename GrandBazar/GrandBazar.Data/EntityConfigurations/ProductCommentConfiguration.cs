@@ -16,6 +16,14 @@ namespace GrandBazar.Data.EntityConfigurations
                     .IsUnicode(true);
 
             productComment
+                    .Property(pc => pc.PhoneNumber)
+                    .IsUnicode(false);
+
+            productComment
+                    .Property(pc => pc.Email)
+                    .IsUnicode(false);
+
+            productComment
                     .HasOne(pc => pc.Product)
                     .WithMany(p => p.ProductComments)
                     .OnDelete(DeleteBehavior.Restrict);

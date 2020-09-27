@@ -53,21 +53,25 @@ namespace GrandBazar.Models
 
         public string InstagramUrl { get; set; }
 
+        [Required]
         [ForeignKey(nameof(Country))]
         public string CountryId { get; set; }
         public virtual Country Country { get; set; }
 
-        [ForeignKey(nameof(State))]
-        public string StateId { get; set; }
-        public virtual State State { get; set; }
-
+        [Required]
         [ForeignKey(nameof(City))]
         public string CityId { get; set; }
         public virtual City City { get; set; }
 
+        [Required]
         [ForeignKey(nameof(ShoppingCart))]
         public string ShoppingCartId { get; set; }
         public virtual ShoppingCart ShoppingCart { get; set; }
+
+        [Required]
+        [ForeignKey(nameof(ZipCode))]
+        public string ZipCodeId { get; set; }
+        public virtual ZipCode ZipCode { get; set; }
 
         public virtual ICollection<ChatMessage> ChatMessages { get; set; } = new HashSet<ChatMessage>();
 
