@@ -350,4 +350,4 @@ MigrationBackup/
 .ionide/
 
 # Custom Ignores
-Configuration.cs
+DbConfiguration.cs
