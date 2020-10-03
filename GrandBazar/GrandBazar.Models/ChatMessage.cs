@@ -23,6 +23,10 @@ namespace GrandBazar.Models
 
         [Required]
         [MaxLength(AttributesConstraints.UserNameMaxLength)]
+        public string SenderName { get; set; }
+
+        [Required]
+        [MaxLength(AttributesConstraints.UserNameMaxLength)]
         public string ReceiverName { get; set; }
     }
 }

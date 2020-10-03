@@ -16,6 +16,10 @@ namespace GrandBazar.Data.EntityConfigurations
                     .IsUnicode(true);
 
             chatMessage
+                    .Property(m => m.SenderName)
+                    .IsUnicode(true);
+
+            chatMessage
                     .Property(m => m.Content)
                     .IsUnicode(true);
 

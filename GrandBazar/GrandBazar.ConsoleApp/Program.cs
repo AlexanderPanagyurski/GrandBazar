@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrandBazar.Data;
+using System;
 
 namespace GrandBazar.ConsoleApp
 {
@@ -6,7 +7,9 @@ namespace GrandBazar.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var db = new GrandBazarDbContext();
+            db.Database.EnsureDeleted();
+            db.Database.EnsureCreated();
         }
     }
 }

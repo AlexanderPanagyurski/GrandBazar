@@ -32,6 +32,11 @@ namespace GrandBazar.Data.EntityConfigurations
                     .HasOne(pc => pc.User)
                     .WithMany(u => u.ProductComments)
                     .OnDelete(DeleteBehavior.Restrict);
+
+            productComment
+                .HasOne(x => x.ParentComment)
+                .WithMany(y => y.CommentReplies)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

@@ -47,5 +47,6 @@ namespace GrandBazar.Models
 
         public virtual ICollection<ProductImage> ProductImages { get; set; } = new HashSet<ProductImage>();
 
+        public virtual ICollection<WishList> WishLists { get; set; } = new HashSet<WishList>();
     }
 }

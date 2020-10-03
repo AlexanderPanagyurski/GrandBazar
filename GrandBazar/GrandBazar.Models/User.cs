@@ -78,5 +78,7 @@ namespace GrandBazar.Models
         public virtual ICollection<ProductComment> ProductComments { get; set; } = new HashSet<ProductComment>();
 
         public virtual ICollection<ProductReview> ProductReviews { get; set; } = new HashSet<ProductReview>();
+
+        public virtual ICollection<WishList> WishLists { get; set; } = new HashSet<WishList>();
     }
 }

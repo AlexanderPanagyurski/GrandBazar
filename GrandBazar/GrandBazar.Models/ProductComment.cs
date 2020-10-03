@@ -42,8 +42,10 @@ namespace GrandBazar.Models
         public string ProductId { get; set; }
         public virtual Product Product { get; set; }
 
-        //[ForeignKey(nameof(ProductComment))]
-        //public string CommentReplyId { get; set; }
-        //public virtual ProductComment CommentReply { get; set; }
+        [ForeignKey(nameof(ProductComment))]
+        public string ParentCommentId { get; set; }
+        public virtual ProductComment ParentComment { get; set; }
+
+        public virtual ICollection<ProductComment> CommentReplies { get; set; } = new HashSet<ProductComment>();
     }
 }
