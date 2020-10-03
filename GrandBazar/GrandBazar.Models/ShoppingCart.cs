@@ -10,16 +10,10 @@ namespace GrandBazar.Models
 {
     public class ShoppingCart
     {
-        public string Id { get; set; } = new Guid().ToString();
-
-        [Range(typeof(decimal),AttributesConstraints.PriceMinValue,AttributesConstraints.PriceMaxValue)]
-        public decimal TotalPrice { get; set; }
-
-        [Required]
-        [ForeignKey(nameof(User))]
         public string UserId { get; set; }
         public virtual User User { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
+        public string ProductId { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

@@ -58,11 +58,6 @@ namespace GrandBazar.Data.EntityConfigurations
                 .HasOne(u => u.City)
                 .WithMany(c => c.Users)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            user
-                .HasOne(u => u.ShoppingCart)
-                .WithOne(sc => sc.User)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

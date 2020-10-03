@@ -53,6 +53,8 @@ namespace GrandBazar.Data
 
         public DbSet<ZipCode> ZipCodes { get; set; } // Checked 13
 
+        public DbSet<WishList> WishLists { get; set; } //Checked 14
+
         //TODO: OnModelCreating Method
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

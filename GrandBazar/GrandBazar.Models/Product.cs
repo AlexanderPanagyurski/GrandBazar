@@ -32,11 +32,6 @@ namespace GrandBazar.Models
         public string ProductCategoryId { get; set; }
         public virtual ProductCategory ProductCategory { get; set; }
 
-        [Required]
-        [ForeignKey(nameof(ShoppingCart))]
-        public string ShoppingCartId { get; set; }
-        public virtual ShoppingCart ShoppingCart { get; set; }
-
         public int AvailableQuantity { get; set; }
 
         public virtual ICollection<OrderProduct> OrderProducts { get; set; } = new HashSet<OrderProduct>();
@@ -48,5 +43,8 @@ namespace GrandBazar.Models
         public virtual ICollection<ProductImage> ProductImages { get; set; } = new HashSet<ProductImage>();
 
         public virtual ICollection<WishList> WishLists { get; set; } = new HashSet<WishList>();
+
+        public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; } = new HashSet<ShoppingCart>();
+
     }
 }

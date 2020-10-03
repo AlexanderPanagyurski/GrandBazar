@@ -64,11 +64,6 @@ namespace GrandBazar.Models
         public virtual City City { get; set; }
 
         [Required]
-        [ForeignKey(nameof(ShoppingCart))]
-        public string ShoppingCartId { get; set; }
-        public virtual ShoppingCart ShoppingCart { get; set; }
-
-        [Required]
         [ForeignKey(nameof(ZipCode))]
         public string ZipCodeId { get; set; }
         public virtual ZipCode ZipCode { get; set; }
@@ -80,5 +75,8 @@ namespace GrandBazar.Models
         public virtual ICollection<ProductReview> ProductReviews { get; set; } = new HashSet<ProductReview>();
 
         public virtual ICollection<WishList> WishLists { get; set; } = new HashSet<WishList>();
+
+        public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; } = new HashSet<ShoppingCart>();
+
     }
 }

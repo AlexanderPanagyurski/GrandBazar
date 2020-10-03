@@ -20,10 +20,6 @@ namespace GrandBazar.Data.EntityConfigurations
                 .WithMany(pc => pc.Products)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            product
-                .HasOne(p => p.ShoppingCart)
-                .WithMany(sc => sc.Products)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
