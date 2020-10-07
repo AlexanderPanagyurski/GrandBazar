@@ -4,15 +4,13 @@ using System.Text;
 
 namespace GrandBazar.Services.Models
 {
-    public class ProductCreateServiceModel
+    public class ProductEditServiceModel
     {
-        public string Name { get; set; }
+        public string Id { get; set; }
 
         public decimal Price { get; set; }
 
         public string Description { get; set; }
-
-        public DateTime CreatedOn { get; set; }
 
         public DateTime? UpdatedOn { get; set; }
 
@@ -21,7 +19,5 @@ namespace GrandBazar.Services.Models
         public DateTime? ArchivedOn { get; set; }
 
         public int AvailableQuantity { get; set; }
-
-        public string ProductCategoryId { get; set; }
     }
 }

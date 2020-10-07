@@ -16,23 +16,36 @@ namespace GrandBazar.Models
         [MaxLength(AttributesConstraints.ProductNameMaxLength)]
         public string Name { get; set; }
 
+
+        [Range(typeof(decimal), AttributesConstraints.PriceMinValue, AttributesConstraints.PriceMaxValue)]
+        public decimal Price { get; set; }
+
         [Required]
         [MaxLength(AttributesConstraints.DescriptionMaxLength)]
         public string Description { get; set; }
-
-        [Range(typeof(decimal),AttributesConstraints.PriceMinValue,AttributesConstraints.PriceMaxValue)]
-        public decimal Price { get; set; }
 
         public DateTime CreatedOn { get; set; }
 
         public DateTime? UpdatedOn { get; set; }
 
+        public bool IsArchived { get; set; }
+
+        public DateTime? ArchivedOn { get; set; }
+
+        public bool IsPromoted { get; set; }
+
+        public DateTime? PromotedOn { get; set; }
+
+        public DateTime? PromotedUntil { get; set; }
+
+        public int AvailableQuantity { get; set; }
+
+        public int Views { get; set; }
+
         [Required]
         [ForeignKey(nameof(ProductCategory))]
         public string ProductCategoryId { get; set; }
         public virtual ProductCategory ProductCategory { get; set; }
-
-        public int AvailableQuantity { get; set; }
 
         public virtual ICollection<OrderProduct> OrderProducts { get; set; } = new HashSet<OrderProduct>();
 
