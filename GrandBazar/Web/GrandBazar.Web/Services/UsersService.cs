@@ -1,50 +1,58 @@
 ﻿namespace GrandBazar.Web.Services
 {
+    using System;
     using System.Linq;
     using System.Security.Cryptography;
     using System.Text;
     using System.Threading.Tasks;
 
     using GrandBazar.Data;
+    using GrandBazar.Data.Common.Repositories;
     using GrandBazar.Data.Models;
+    using GrandBazar.Data.Models.Enums;
 
     public class UsersService : IUsersService
     {
-        private readonly ApplicationDbContext db;
+        private readonly IDeletableEntityRepository<ApplicationUser> usersRepository;
 
-        public UsersService(ApplicationDbContext db)
+        public UsersService(IDeletableEntityRepository<ApplicationUser> usersRepository)
         {
-            this.db = db;
+            this.usersRepository = usersRepository;
         }
 
-        public async Task<string> CreateUser(string firstName, string lastName, string email, string address, string city, string country, string phoneNumber, string password)
+        public async Task<string> CreateUserAsync(string firstName, string lastName, string email, string gender, string city, string country, string phoneNumber, string password)
         {
             var user = new ApplicationUser
             {
                 FirstName = firstName,
                 LastName = lastName,
                 Email = email,
+                CreatedOn = DateTime.UtcNow,
+                Gender = Enum.Parse<Gender>(gender),
+                PhoneNumber=phoneNumber,
                 PasswordHash = this.ComputeHash(password),
             };
 
-            await this.db.Users.AddAsync(user);
-            await this.db.SaveChangesAsync();
+            await this.usersRepository.AddAsync(user);
+            await this.usersRepository.SaveChangesAsync();
 
             return user.Id;
         }
 
-        public string GetUserId(string firstName, string lastName, string password)
+        public string GetUserId(string email, string password)
         {
-            var user = this.db
-                .Users
-                .FirstOrDefault(x => x.FirstName == firstName && x.LastName == lastName && x.PasswordHash == this.ComputeHash(password));
+            var user = this
+                .usersRepository
+                .All()
+                .FirstOrDefault(x => x.Email == email && x.PasswordHash == ComputeHash(password));
+
             return user?.Id;
         }
 
-        public bool IsEmailAvailable(string email)
-        {
-            return !this.db.Users.Any(x => x.Email == email);
-        }
+        // public bool IsEmailAvailable(string email)
+        // {
+        //     return !this.usersRepository;
+        //}
 
         private string ComputeHash(string input)
         {

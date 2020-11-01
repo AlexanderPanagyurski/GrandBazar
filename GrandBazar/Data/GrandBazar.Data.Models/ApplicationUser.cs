@@ -28,8 +28,6 @@ namespace GrandBazar.Data.Models
         [MaxLength(AttributesConstraints.UserNameMaxLength)]
         public string LastName { get; set; }
 
-        public DateTime BirthDate { get; set; }
-
         // Audit info
         public DateTime CreatedOn { get; set; }
 
@@ -56,13 +54,11 @@ namespace GrandBazar.Data.Models
 
         public string InstagramUrl { get; set; }
 
-        [Required]
         [ForeignKey(nameof(Country))]
         public string CountryId { get; set; }
 
         public virtual Country Country { get; set; }
 
-        [Required]
         [ForeignKey(nameof(City))]
         public string CityId { get; set; }
 

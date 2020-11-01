@@ -2,6 +2,7 @@
 {
     using GrandBazar.Web.Services;
     using Microsoft.AspNetCore.Mvc;
+    using System.Threading.Tasks;
 
     public class UsersController : BaseController
     {
@@ -18,9 +19,9 @@
         }
 
         [HttpPost]
-        public IActionResult Register(string firstName, string lastName, string email, string address, string city, string country, string phoneNumber, string password, string confirmPassword)
+        public async Task<IActionResult> Register(string firstName, string lastName, string email, string gender, string city, string country, string phoneNumber, string password, string confirmPassword)
         {
-            this.usersService.CreateUser(firstName, lastName, email, address, city, country, phoneNumber, password);
+            await this.usersService.CreateUserAsync(firstName, lastName, email, gender, city, country, phoneNumber, password);
 
             return this.Redirect("/");
         }
@@ -28,6 +29,12 @@
         public IActionResult Login()
         {
             return this.View();
+        }
+
+        public IActionResult Logout()
+        {
+            this.SignOut();
+            return this.Redirect("/");
         }
     }
 }
