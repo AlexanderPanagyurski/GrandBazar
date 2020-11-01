@@ -39,6 +39,16 @@
             return user.Id;
         }
 
+        public ApplicationUser GetUser(string email, string password)
+        {
+            var user = this
+                .usersRepository
+                .All()
+                .FirstOrDefault(x => x.Email == email && x.PasswordHash == ComputeHash(password));
+
+            return user;
+        }
+
         public string GetUserId(string email, string password)
         {
             var user = this

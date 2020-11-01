@@ -1,8 +1,10 @@
 ﻿namespace GrandBazar.Web.Controllers
 {
-    using GrandBazar.Web.Services;
-    using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
+    using GrandBazar.Data.Models;
+    using GrandBazar.Web.Services;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
 
     public class UsersController : BaseController
     {
@@ -23,12 +25,20 @@
         {
             await this.usersService.CreateUserAsync(firstName, lastName, email, gender, city, country, phoneNumber, password);
 
-            return this.Redirect("/");
+            return this.Redirect("/Users/Login");
         }
 
         public IActionResult Login()
         {
             return this.View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(string email, string password)
+        {
+            var user = this.usersService.GetUser(email, password);
+
+            return this.Redirect("/");
         }
 
         public IActionResult Logout()
