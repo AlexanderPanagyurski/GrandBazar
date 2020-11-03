@@ -351,3 +351,5 @@ MigrationBackup/
 
 # Custom Ignores
 DbConfiguration.cs
+appsettings.json
+appsettings.json
